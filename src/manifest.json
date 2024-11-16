@@ -1,0 +1,27 @@
+{
+  "name": "Tibia Statistic Filter",
+  "version": "1.0.0",
+  "description": "Filter bosses from tibia-statistic website.",
+  "manifest_version": 3,
+  "author": "Igor MãoZão",
+  "icons": {
+    "32": "icon-32.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "matches": ["https://www.tibia-statistic.com/bosshunter/details/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "options.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}
